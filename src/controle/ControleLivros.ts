@@ -1,6 +1,5 @@
 import { Livro } from '../modelo/Livro';
 
-// Definindo a variável livros como um Array<Livro> contendo ao menos três elementos
 const livros: Array<Livro> = [
   {
     codigo: 1,
@@ -26,19 +25,19 @@ const livros: Array<Livro> = [
 ];
 
 export class ControleLivro {
-  // Método que retorna todos os livros
+  // retorna todos os livros
   obterLivros(): Array<Livro> {
     return livros;
   }
 
-  // Método que inclui um novo livro
+  // inclui um novo livro
   incluir(livro: Livro): void {
     const novoCodigo = livros.length > 0 ? Math.max(...livros.map(l => l.codigo)) + 1 : 1;
     livro.codigo = novoCodigo;
     livros.push(livro);
   }
 
-  // Método que exclui um livro pelo código
+  // exclui um livro
   excluir(codigo: number): void {
     const indice = livros.findIndex(l => l.codigo === codigo);
     if (indice >= 0) {

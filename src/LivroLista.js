@@ -14,7 +14,7 @@ const LinhaLivro = (props) => {
   return (
     <tr>
       <td style={{width:'10%'}}>{livro.codigo}</td>
-      <td style={{ width: '20%'}}>{livro.titulo}</td>
+      <td style={{ width: '20%' , wordWrap: 'break-word'}}>{livro.titulo}</td>
       <td style={{ width: '30%', wordWrap: 'break-word' }}>{livro.resumo}</td>
       <td style={{ width: '25%' }}>
         <ul className='list-unstyled' style={{ marginBottom: 0 }}>

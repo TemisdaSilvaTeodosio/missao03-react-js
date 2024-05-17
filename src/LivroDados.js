@@ -9,13 +9,13 @@ const controleEditora = new ControleEditora();
 
 
 const LivroDados = () => {
-    //Definindo o vetor de opções das editoras
+    //vetor de opções das editoras
     const opcoes = controleEditora.getEditora().map(editora => ({
         value: editora.codEditora,
         text: editora.nome,
     }))
 
-    //definindo as propriedades de estado
+    //propriedades de estado
     const [titulo, setTitulo] = useState('') 
     const [resumo, setResumo] = useState('') 
     const [autores, setAutores] = useState('')
@@ -27,7 +27,7 @@ const LivroDados = () => {
         setCodEditora(Number(event.target.value));
     }
 
-    //método de incluir um novo livro
+    //incluir um novo livro
     const incluir = (event) =>{
         event.preventDefault()
         const novoLivro = {
@@ -69,7 +69,7 @@ const LivroDados = () => {
                             ))}
                         </select>
                     </div>
-                    <button type='submit' className='btn btn-primary'>Salvar</button>
+                    <button type='submit' className='btn btn-primary'>Incluir</button>
                 </form>
             </div>
         </main>
